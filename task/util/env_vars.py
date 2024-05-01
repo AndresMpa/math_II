@@ -10,6 +10,8 @@ env_file = join(project_path.parent.absolute(), ".env")
 load_dotenv(env_file)
 
 config = {
+    "mode": os.environ.get("MODE"),
+
     "image_dir": os.environ.get("IMAGE_DIR"),
     "save_dir": os.environ.get("SAVE_DIR"),
 
