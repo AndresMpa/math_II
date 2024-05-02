@@ -12,12 +12,14 @@ load_dotenv(env_file)
 config = {
     "mode": os.environ.get("MODE"),
 
-    "mtx_max": int(os.environ.get("MTX_MAX")),
-    "mtx_min": int(os.environ.get("MTX_MIN")),
+    "mtx_max": int(os.environ.get("MATRIX_MAX", 200)),
+    "mtx_min": int(os.environ.get("MATRIX_MIN", 0)),
 
-    "image_size": int(os.environ.get("IMAGE_SIZE")),
+    "image_size": int(os.environ.get("IMAGE_SIZE", 200)),
     "image_dir": os.environ.get("IMAGE_DIR"),
-    "save_dir": os.environ.get("SAVE_DIR"),
+
+    "save_image_dir": os.environ.get("SAVE_IMAGE_DIR"),
+    "save_matrix_dir": os.environ.get("SAVE_MATRIX_DIR"),
 
     "web_site": os.environ.get("WEB_SITE"),
 
