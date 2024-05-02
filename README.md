@@ -5,7 +5,11 @@ some other mathematical cool things. Go around, catch you later!
 
 ## What can I find here?
 
-> A fancy TODO: Finish this section
+Some images modification using math:
+
+![Default image](./.examples/exa.jpg "Default")
+
+![Converted image](./.examples/exa_conversion.png "After conversion")
 
 ### Index
 
