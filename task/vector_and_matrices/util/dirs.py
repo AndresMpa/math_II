@@ -3,6 +3,8 @@ import re
 from typing import List
 from warnings import warn
 
+from util.env_vars import config
+
 
 def extract_file_name_data(
     file_name: str,
@@ -135,9 +137,10 @@ def create_dir(
             dir_path = get_current_path(path)
             os.mkdir(dir_path)
 
+        if config["verbose"]:
             print(f"Directory {path} created")
-    except OSError:
-        print(f"[ERROR]: Creating {path}")
+    except OSError as error_data:
+        raise ValueError(f"[ERROR]: Creating {path} \n{error_data}")
 
 
 def clear_dir(
@@ -157,7 +160,8 @@ def clear_dir(
             if os.path.isfile(file_path):
                 os.remove(file_path)
 
-        print(f"Files from {path} deleted successfully.")
+        if config["verbose"]:
+            print(f"Files from {path} deleted successfully.")
     except OSError:
         warn(
             f"[WARNING]: Deleting files at {path}",
