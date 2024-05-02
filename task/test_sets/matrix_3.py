@@ -1,24 +1,12 @@
-from numpy import array
-
 from util.env_vars import config
 from util.files import save_as_csv
+from matrix.main import load_matrix
 from matrix.main import matrix_multiplication as mtx
 from matrix.main import matrix_multiplication_check as mtxck
 
 
 def matrix_3(timestamp: str) -> None:
-    mxA = array([
-        [1, 2],
-        [3, 4]
-    ])
-    mxB = array([
-        [5, 6],
-        [7, 8]
-    ])
-    mxC = array([
-        [9, 10],
-        [11, 12]
-    ])
+    mxA, mxB, mxC = load_matrix([(2, 2), (2, 2), (2, 2)])
 
     if config["verbose"]:
         print("Matrix A:")

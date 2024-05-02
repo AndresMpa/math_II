@@ -1,27 +1,10 @@
-from numpy import array
-
 import matrix.main as mtx
 from util.env_vars import config
 from util.files import save_as_csv
 
 
 def matrix_2(timestamp: str) -> None:
-    mxA = array([
-        [1,  2,  3,  4,  5,  6,  7,  8,  9],
-        [10, 11, 12, 13, 14, 15, 16, 17, 18]
-    ])
-
-    mxB = array([
-        [1, 2],
-        [3, 4],
-        [5, 6],
-        [7, 8],
-        [9, 10],
-        [11, 12],
-        [13, 14],
-        [15, 16],
-        [17, 18],
-    ])
+    mxA, mxB = mtx.load_matrix([(9, 2), (2, 9)])
 
     if config["verbose"]:
         print("Matrix A:")

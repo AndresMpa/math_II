@@ -1,21 +1,10 @@
-from numpy import array
-
 import matrix.main as mtx
 from util.env_vars import config
 from util.files import save_as_csv
 
 
 def matrix_1(timestamp: str) -> None:
-    mxA = array([
-        [1, 2, 3],
-        [4, 5, 6]
-    ])
-
-    mxB = array([
-        [7, 8],
-        [9, 10],
-        [11, 12]
-    ])
+    mxA, mxB = mtx.load_matrix([(2, 3), (3, 2)])
 
     if config["verbose"]:
         print("Matrix A:")

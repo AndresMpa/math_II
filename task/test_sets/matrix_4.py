@@ -1,15 +1,12 @@
-from numpy.random import randint
-
 from util.env_vars import config
 from util.files import save_as_csv
+from matrix.main import load_matrix
 from matrix.main import matrix_multiplication as mtx
 from matrix.main import matrix_multiplication_check as mtxck
 
 
 def matrix_4(timestamp: str) -> None:
-    mxA = randint(config["mtx_min"], config["mtx_max"] + 1, size=(3, 4))
-    mxB = randint(config["mtx_min"], config["mtx_max"] + 1, size=(4, 5))
-    mxC = randint(config["mtx_min"], config["mtx_max"] + 1, size=(5, 3))
+    mxA, mxB, mxC = load_matrix([(3, 4), (4, 5), (5, 3)])
 
     if config["verbose"]:
         print("Matrix A:")
