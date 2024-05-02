@@ -6,9 +6,11 @@ from util.env_vars import config
 
 
 def vector_1(timestamp: str) -> None:
-    create_random([config["image_size"]], "test")
-    image = load_image()
     degrees = uniform(0, 360)
+    create_random(
+        [config["image_size"]],
+        f"TV1_d-{str(degrees)}_s-{str(config['image_size'])}_{timestamp}")
+    image = load_image()
 
     angle = degrees_to_radians(degrees)
     moded_image = rotate(image, angle)
