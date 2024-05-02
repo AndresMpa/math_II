@@ -1,7 +1,7 @@
 ---
-name: "[BUG]"
+name: Community bug report
 about: Create a report to help us improve, please be polite
-title: ''
+title: "[BUG]"
 labels: bug
 assignees: AndresMpa
 
