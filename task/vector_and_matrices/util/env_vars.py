@@ -12,6 +12,8 @@ load_dotenv(env_file)
 config = {
     "mode": os.environ.get("MODE"),
 
+    "image_stretch_factor": int(os.environ.get("IMAGE_SF", 2)),
+    "image_tighten_factor": int(os.environ.get("IMAGE_TF", 2)),
     "image_size": int(os.environ.get("IMAGE_SIZE", 200)),
     "image_dir": os.environ.get("IMAGE_DIR"),
 
