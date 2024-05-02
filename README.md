@@ -11,6 +11,10 @@ Some images modification using math:
 
 ![Converted image](./.examples/exa_conversion.png "After conversion")
 
+Matrix calculus
+
+![Simple matrix](./.examples/calculus.png "Simple matrix calculus")
+
 ### Index
 
 | Narrow                          | Folder                                                                     |
