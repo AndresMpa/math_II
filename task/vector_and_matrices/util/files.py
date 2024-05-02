@@ -38,16 +38,22 @@ def load_csv_file() -> List[ndarray]:
     csv_data = []
     if not check_path(config["mtx_dir"]):
         warn(
-            f"[WARNING]: Directory {config['mtx_dir']} not found",
+            f"[WARNING]: Directory {config['mtx_dir']} not found. Creating it",
             RuntimeWarning,
-            stacklevel=1
+            stacklevel=2
         )
+        create_dir(config["mtx_dir"])
 
     path = get_current_path(config['mtx_dir'])
     files = os.listdir(path)
 
-    if (len(files) <= 0):
-        raise ValueError(f"No files provided at {config['mtx_dir']}")
+    if (len(files) == 0):
+        warn(
+            f"[WARNING]: No files provided at {config['mtx_dir']}",
+            RuntimeWarning,
+            stacklevel=1)
+
+        return csv_data
 
     for file_name in files:
         file_path = create_path(config["mtx_dir"], file_name)

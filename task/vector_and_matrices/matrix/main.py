@@ -80,17 +80,15 @@ def load_matrix(schema: List[Tuple[int, int]]):
         A list of ndarray with data from files at "mtx_dir" or defaults sent
     """
     matrices = []
-    if (config["mtx_dir"] != ""):
-        files = load_csv_file()
+    files = load_csv_file()
 
-        for data in files:
-            matrices.append(data)
-    else:
+    if len(files) == 0:
         warn(
             "[WARNING]: Loading defaults for matrix",
             RuntimeWarning,
             stacklevel=1
         )
+
         for sizes in schema:
             matrix = randint(
                 config["mtx_min"],
@@ -98,5 +96,8 @@ def load_matrix(schema: List[Tuple[int, int]]):
                 size=sizes
             )
             matrices.append(matrix)
+    else:
+        for data in files:
+            matrices.append(data)
 
     return matrices
