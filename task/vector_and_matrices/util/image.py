@@ -6,7 +6,7 @@ from typing import List
 from random import randint
 
 from util.env_vars import config
-from util.dirs import create_dir, clear_dir
+from util.dirs import create_dir
 from util.dirs import check_path, create_path, get_current_path
 
 
@@ -102,17 +102,3 @@ def save_image(
     except OSError:
         print(
             f"[ERROR]: Something went wrong while saving the file {file_name}")
-
-
-def clear_images(
-) -> None:
-    """
-    Removes all data from respective directories
-    """
-    if (config["autoclear"]):
-        for dir in ["save_dir"]:
-            path = get_current_path(config[dir])
-            clear_dir(path)
-
-        if (config["verbose"]):
-            print("Files removed")
