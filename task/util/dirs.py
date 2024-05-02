@@ -3,8 +3,13 @@ import re
 from typing import List
 
 
-def extract_file_name_data(file_name: str, prefix: str, suffix: str) -> str | None:
-    """Extracts an identifier given a file name based on a given prefix and suffix
+def extract_file_name_data(
+    file_name: str,
+    prefix: str,
+    suffix: str
+) -> str | None:
+    """
+    Extracts an identifier given a file name based on a given prefix and suffix
 
     Args:
         file_name (str): The input file name containing the model name
@@ -23,8 +28,11 @@ def extract_file_name_data(file_name: str, prefix: str, suffix: str) -> str | No
         return None
 
 
-def get_current_path(path: str) -> str:
-    """Gives the current absolute path
+def get_current_path(
+    path: str
+) -> str:
+    """
+    Gives the current absolute path
 
     Args:
         path (str): Path to add into root path
@@ -38,8 +46,11 @@ def get_current_path(path: str) -> str:
     return dir_path
 
 
-def file_exists(file_path: str) -> bool:
-    """Check if a file exists
+def file_exists(
+    file_path: str
+) -> bool:
+    """
+    Check if a file exists
 
     Args:
         file_path (str): The path to the file
@@ -50,8 +61,12 @@ def file_exists(file_path: str) -> bool:
     return os.path.exists(file_path)
 
 
-def list_files(path: str, extension: str) -> List:
-    """List files with a specific extension in a directory
+def list_files(
+    path: str,
+    extension: str
+) -> List:
+    """
+    List files with a specific extension in a directory
 
     Args:
         path (str): The path to the directory containing the files
@@ -66,8 +81,11 @@ def list_files(path: str, extension: str) -> List:
     return files
 
 
-def check_path(path: str) -> bool:
-    """Checks if a path exist
+def check_path(
+    path: str
+) -> bool:
+    """
+    Checks if a path exist
 
     Args:
         path (str): Path to check
@@ -78,8 +96,12 @@ def check_path(path: str) -> bool:
     return os.path.isdir(path)
 
 
-def create_path(path: str, filename: str) -> str:
-    """Creates an absolute path for a file
+def create_path(
+    path: str,
+    filename: str
+) -> str:
+    """
+    Creates an absolute path for a file
 
     Args:
         path (str): A directory path to host the file
@@ -94,8 +116,11 @@ def create_path(path: str, filename: str) -> str:
     return file_path
 
 
-def create_dir(path: str) -> None:
-    """Creates a given path checking is exists of not
+def create_dir(
+    path: str
+) -> None:
+    """
+    Creates a given path checking is exists of not
 
     Args:
         path (str): Path to create
@@ -112,8 +137,11 @@ def create_dir(path: str) -> None:
         print(f"[ERROR]: Creating {path}")
 
 
-def clear_dir(path: str) -> None:
-    """Delete all files inside a given directory
+def clear_dir(
+    path: str
+) -> None:
+    """
+    Delete all files inside a given directory
 
     Args:
         path (str): Path to directory to clear
