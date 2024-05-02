@@ -39,8 +39,8 @@ Your .env file can control each section of the code, this is pretty simple
 | `IMAGE_SIZE`      | It means the size XxY of defaults images donwloaded from [lorem picsum](https://picsum.photos/) |
 | `IMAGE_DIR`       | You can configure a directory to donwload images                                                |
 | `MATRIX_DIR`      | If you want to load an image you can do it using this option (CSV only)                         |
-| `MATRIX_MAX`      | Some tests use random matrix this option defines the _max possible_ number for those matrix     |
-| `MATRIX_MIN`      | Some tests use random matrix this option defines the _min possible_ number for those matrix     |
+| `MATRIX_MAX`      | Matrices defaults use random matrix this option defines the _max possible_ number for it        |
+| `MATRIX_MIN`      | Matrices defaults use random matrix this option defines the _min possible_ number for it        |
 | `SAVE_IMAGE_DIR`  | From test 1 to 4 some image will be created so you must specify the directory                   |
 | `SAVE_MATRIX_DIR` | From test 5 to 8 some csv files will be created so you must specify the directory               |
 | `WEB_SITE`        | [lorem picsum](https://picsum.photos/) is the default provider, but you can define another      |
