@@ -93,10 +93,10 @@ def save_image(
         file_extention (str): The specific image file extention (Default is jpg)
     """
     try:
-        path = get_current_path(config['save_dir'])
+        path = get_current_path(config['save_image_dir'])
 
-        if not check_path(f"{config['save_dir']}"):
-            create_dir(config["save_dir"])
+        if not check_path(f"{config['save_image_dir']}"):
+            create_dir(config["save_image_dir"])
 
         image.save(f"{path}/{file_name}.{file_extention}", f"{file_extention}")
     except OSError:
