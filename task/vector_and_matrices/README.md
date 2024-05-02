@@ -11,12 +11,14 @@ pip install -r ./requirements.txt
 Then create a .env file, and copy-paste the following configuration
 
 ```bash
-MODE="8"
+MODE="1"
 
 IMAGE_SIZE=200
-IMAGE_DIR="images"
-MATRIX_DIR="matrix"
+IMAGE_SF=2
+IMAGE_TF=2
+IMAGE_DIR="img_data"
 
+MATRIX_DIR="mtx_data"
 MATRIX_MAX=1000
 MATRIX_MIN=1
 
@@ -25,7 +27,7 @@ SAVE_MATRIX_DIR="mtx_result"
 
 WEB_SITE="https://picsum.photos"
 
-VERBOSE=0
+VERBOSE=1
 AUTOCLEAR=0
 ```
 
@@ -37,6 +39,8 @@ Your .env file can control each section of the code, this is pretty simple
 | ----------------- | ----------------------------------------------------------------------------------------------- |
 | `MODE`            | Testing mode from `./test_sets/`, 1 to 4 means vectors while 5 to 8 means matrix                |
 | `IMAGE_SIZE`      | It means the size XxY of defaults images donwloaded from [lorem picsum](https://picsum.photos/) |
+| `IMAGE_SF`        | It means stretch factor for stretching conversion                                               |
+| `IMAGE_TF`        | It means tighten factor for tightening conversion                                               |
 | `IMAGE_DIR`       | You can configure a directory to donwload images                                                |
 | `MATRIX_DIR`      | If you want to load an image you can do it using this option (CSV only)                         |
 | `MATRIX_MAX`      | Matrices defaults use random matrix this option defines the _max possible_ number for it        |
