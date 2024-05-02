@@ -1,4 +1,10 @@
+from warnings import warn
+from typing import List, Tuple
+from numpy.random import randint
 from numpy import dot, zeros, ndarray
+
+from util.env_vars import config
+from util.files import load_csv_file
 
 
 def matrix_verification(
@@ -61,3 +67,36 @@ def matrix_multiplication(
                 result_matrix[i][j] += matrix_A[i][k] * matrix_B[k][j]
 
     return result_matrix
+
+
+def load_matrix(schema: List[Tuple[int, int]]):
+    """
+    Loads an image from "mtx_dir" or load defaults a schema
+
+    Args:
+        schema (List[Tuple[int]]): A sizes to build random arrays
+
+    Returns:
+        A list of ndarray with data from files at "mtx_dir" or defaults sent
+    """
+    matrices = []
+    if (config["mtx_dir"] != ""):
+        files = load_csv_file()
+
+        for data in files:
+            matrices.append(data)
+    else:
+        warn(
+            "Loading defaults for matrix",
+            RuntimeWarning,
+            stacklevel=1
+        )
+        for sizes in schema:
+            matrix = randint(
+                config["mtx_min"],
+                config["mtx_max"] + 1,
+                size=sizes
+            )
+            matrices.append(matrix)
+
+    return matrices
