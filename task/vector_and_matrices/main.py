@@ -1,7 +1,7 @@
 import time
 from util.env_vars import config
-from util.image import clear_images
 from test_sets.main import select_stage
+from util.dirs import clear_dir, get_current_path
 
 if __name__ == '__main__':
     timestamp = str(time.time())
@@ -12,4 +12,7 @@ if __name__ == '__main__':
         raise Exception("There is an error on your .env file")
 
     test(timestamp)
-    clear_images()
+
+    if (config["autoclear"]):
+        clear_dir(get_current_path(config['image_dir']))
+        clear_dir(get_current_path(config['mtx_dir']))
