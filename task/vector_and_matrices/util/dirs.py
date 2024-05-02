@@ -1,6 +1,7 @@
 import os
 import re
 from typing import List
+from warnings import warn
 
 
 def extract_file_name_data(
@@ -156,6 +157,10 @@ def clear_dir(
             if os.path.isfile(file_path):
                 os.remove(file_path)
 
-        print("Files deleted successfully.")
+        print(f"Files from {path} deleted successfully.")
     except OSError:
-        print(f"[ERROR]: Deleting files at {path}")
+        warn(
+            f"[WARNING]: Deleting files at {path}",
+            RuntimeWarning,
+            stacklevel=1
+        )
