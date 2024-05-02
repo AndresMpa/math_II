@@ -1,7 +1,11 @@
+import os
 import csv
-from numpy import ndarray
+from typing import List
+from warnings import warn
+from numpy import ndarray, array
 
-from util.dirs import check_path, create_path, create_dir
+from util.dirs import check_path, create_path, get_current_path
+from util.dirs import create_dir
 from util.env_vars import config
 
 
@@ -19,6 +23,43 @@ def save_as_csv(data: ndarray, file_name: str) -> None:
     file_path = create_path(config["save_matrix_dir"], f"{file_name}.csv")
 
     with open(f"{file_path}", mode='w', newline='') as file:
-        writer = csv.writer(file)
+        writer = csv.writer(file, delimiter=',', quotechar='"')
         for row in data:
             writer.writerow(row)
+
+
+def load_csv_file() -> List[ndarray]:
+    """
+    It loads all csv type files from mtx_dir then creates a list of ndarrays
+
+    Returns:
+        List of data in ram as ndarray
+    """
+    csv_data = []
+    if not check_path(config["mtx_dir"]):
+        warn(
+            f"Directory {config['mtx_dir']} not found",
+            RuntimeWarning,
+            stacklevel=1
+        )
+
+    path = get_current_path(config['mtx_dir'])
+    files = os.listdir(path)
+
+    if (len(files) <= 0):
+        raise ValueError(f"No files provided at {config['mtx_dir']}")
+
+    for file_name in files:
+        file_path = create_path(config["mtx_dir"], file_name)
+
+        with open(f'{file_path}', 'r') as file:
+            lines = file.readlines()
+            raw_data = []
+
+            for line in lines:
+                columns = line.strip().split(',')
+                raw_data.append([float(x) for x in columns])
+
+        csv_data.append(array(raw_data))
+
+    return csv_data
