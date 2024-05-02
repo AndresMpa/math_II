@@ -87,7 +87,7 @@ def load_matrix(schema: List[Tuple[int, int]]):
             matrices.append(data)
     else:
         warn(
-            "Loading defaults for matrix",
+            "[WARNING]: Loading defaults for matrix",
             RuntimeWarning,
             stacklevel=1
         )
