@@ -1,5 +1,5 @@
 *_result/
-data_*/
+*_data/
 *env/
 
 # Created by https://www.toptal.com/developers/gitignore/api/python
