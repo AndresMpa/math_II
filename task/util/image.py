@@ -10,7 +10,11 @@ from util.dirs import create_dir, clear_dir
 from util.dirs import check_path, create_path, get_current_path
 
 
-def create_random(size: List[int], file_name: str, file_extention: str = "jpg") -> None:
+def create_random(
+    size: List[int],
+    file_name: str,
+    file_extention: str = "jpg"
+) -> None:
     """
     Create a file from config given a size and its file name
 
@@ -41,7 +45,9 @@ def create_random(size: List[int], file_name: str, file_extention: str = "jpg") 
         print(f"[ERROR] donwloading image {response.status_code}")
 
 
-def load_image(file_name: str = "") -> Image.Image:
+def load_image(
+    file_name: str = ""
+) -> Image.Image:
     """
     Loads file_name or a random file from config
 
@@ -72,7 +78,11 @@ def load_image(file_name: str = "") -> Image.Image:
             f"[ERROR]: Something went wrong while getting image {file_name} or index not found")
 
 
-def save_image(image: Image.Image, file_name: str, file_extention: str = "PNG") -> None:
+def save_image(
+    image: Image.Image,
+    file_name: str,
+    file_extention: str = "PNG"
+) -> None:
     """
     Saves a pillow kind image
 
@@ -93,7 +103,8 @@ def save_image(image: Image.Image, file_name: str, file_extention: str = "PNG") 
             f"[ERROR]: Something went wrong while saving the file {file_name}")
 
 
-def clear_images():
+def clear_images(
+) -> None:
     """
     Removes all data from respective directories
     """
