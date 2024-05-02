@@ -38,7 +38,7 @@ def load_csv_file() -> List[ndarray]:
     csv_data = []
     if not check_path(config["mtx_dir"]):
         warn(
-            f"Directory {config['mtx_dir']} not found",
+            f"[WARNING]: Directory {config['mtx_dir']} not found",
             RuntimeWarning,
             stacklevel=1
         )
