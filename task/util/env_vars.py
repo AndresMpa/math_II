@@ -12,6 +12,9 @@ load_dotenv(env_file)
 config = {
     "mode": os.environ.get("MODE"),
 
+    "mtx_max": int(os.environ.get("MTX_MAX")),
+    "mtx_min": int(os.environ.get("MTX_MIN")),
+
     "image_size": int(os.environ.get("IMAGE_SIZE")),
     "image_dir": os.environ.get("IMAGE_DIR"),
     "save_dir": os.environ.get("SAVE_DIR"),

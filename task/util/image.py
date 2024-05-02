@@ -72,6 +72,7 @@ def load_image(
         file_path = os.path.join(path, files[idx])
         if os.path.isfile(file_path):
             image = Image.open(f"{file_path}")
+
             return image
     except OSError:
         print(

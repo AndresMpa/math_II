@@ -43,6 +43,7 @@ def get_current_path(
     current_dir = os.path.dirname(os.path.abspath(__file__))
     root_dir = os.path.dirname(current_dir)
     dir_path = os.path.join(root_dir, path)
+
     return dir_path
 
 
@@ -78,6 +79,7 @@ def list_files(
         (`path`) that have the specified file extension (`extension`)
     """
     files = [f for f in os.listdir(path) if f.endswith(extension)]
+
     return files
 
 
