@@ -1,5 +1,5 @@
-*images/
-*moded/
+*_result/
+data_*/
 *env/
 
 # Byte-compiled / optimized / DLL files
