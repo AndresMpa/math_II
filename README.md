@@ -3,6 +3,9 @@
 Hey there! (Am I reading this again?), here you can find a set of different implementation with vectors, matrices and
 some other mathematical cool things. Go around, catch you later!
 
+### To do
+Move things to Jupiter 
+
 ## What can I find here?
 
 Some images modification using math:
