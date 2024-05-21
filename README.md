@@ -4,7 +4,7 @@ Hey there! (Am I reading this again?), here you can find a set of different impl
 some other mathematical cool things. Go around, catch you later!
 
 ### To do
-Move things to Jupiter 
+- [ ] Move things to Jupiter 
 
 ## What can I find here?
 
