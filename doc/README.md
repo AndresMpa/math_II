@@ -1,17 +1,16 @@
 # Task #1
 
-## Vectors
+### Vectors
 
 - Vectors addition
 - Lineal transformation with an image
 - Rotate
 - Tighten
-- Stretch 
+- Stretch
 
-## Matrix
+### Matrix
 - Matrix multiplication
 - 2 transformations of associated matrices
-
 
 # Task #2
 
