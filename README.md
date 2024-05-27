@@ -25,7 +25,7 @@ Matrix calculus
 | Images customization using math | [./task/vector_and_matrices/vectors/](./task/vector_and_matrices/vectors/) |
 | Simple matricial calculus       | [./task/vector_and_matrices/matrix/ ](./task/vector_and_matrices/matrix/)  |
 
-### How to help
+## How to help
 
 #### Found a bug!?
 
