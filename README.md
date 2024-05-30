@@ -1,7 +1,7 @@
 # Math II notes
 
-Hey there! (Am I reading this again?), here you can find a set of different implementation with vectors, matrices and
-some other mathematical cool things. Go around, catch you later!
+Hey there! Here you can find a set of different implementation with vectors, matrices and
+some other mathematical cool things.
 
 ### To do
 - [ ] Move things to Jupiter 
