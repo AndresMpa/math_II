@@ -27,3 +27,9 @@
 - Provide a transformation that takes any vector of the 3D space and projects it to the light-blue plane. Compute the determinant
 - Provide a transformation that takes any vector of the 3D space and takes it to the purple line. What is your conclusion about the determinant?
 - The easiest one: Provide a transformation of a vector in the 3D space and transform it to the vector $\vec{v} = ( 0, 0, k )$ for any constant $k$. Provide your conclusions on the determinant
+
+# Task #3
+
+Do a 3 layers PCA over an image having RGB as layers each color should be a layer
+
+> Note: It's possible that matrix were not compatible, hence it might be necessary to fix that to join the matrices
