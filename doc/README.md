@@ -30,6 +30,8 @@
 
 # Task #3
 
-Do a 3 layers PCA over an image having RGB as layers each color should be a layer
+Do a 3-layer PCA over an image having RGB as layers each color should be a layer. Use the ref as an example
+
+Ref: https://dataknowsall.com/blog/imagepca.html
 
 > Note: It's possible that matrix were not compatible, hence it might be necessary to fix that to join the matrices
