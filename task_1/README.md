@@ -1,6 +1,6 @@
 ### Usage
 
-Create a virtual environment using python:
+Create a virtual environment using Python:
 
 ```bash
 python -m venv env
