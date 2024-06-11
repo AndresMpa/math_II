@@ -27,6 +27,7 @@
 - Provide a transformation that takes any vector of the 3D space and projects it to the light-blue plane. Compute the determinant
 - Provide a transformation that takes any vector of the 3D space and takes it to the purple line. What is your conclusion about the determinant?
 - The easiest one: Provide a transformation of a vector in the 3D space and transform it to the vector $\vec{v} = ( 0, 0, k )$ for any constant $k$. Provide your conclusions on the determinant
+- Provide a transformation to accomplish the picture idea. Compare the determinant and provide your conclusions
 
 # Task #3
 
