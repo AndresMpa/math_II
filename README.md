@@ -1,7 +1,6 @@
 # Math II notes
 
-Here you can find a set of different implementation with vectors, matrices and
-some other mathematical cool things.
+Here you can find a set of different implementation with vectors, matrices and some other mathematical cool things.
 
 ## What can I find here?
 
